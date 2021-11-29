@@ -10,6 +10,7 @@ public class OcrOfficer extends RequestHandler {
     }
 
     @Override
+    // handle the request or pass the request to next handler
     public void handleRequest(Request req) {
         if (req.getRequestType().equals(RequestType.TORTURE_PRISONER)) {
             printHandling(req);

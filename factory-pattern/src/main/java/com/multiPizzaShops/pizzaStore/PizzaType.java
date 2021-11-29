@@ -3,28 +3,34 @@ package com.multiPizzaShops.pizzaStore;
 import com.multiPizzaShops.pizza.*;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public enum PizzaType {
-    NYCHEESE(NYCheesePizza::new, "NYCheese"),
-    NYPEPPERONI(NYPepperoniPizza::new, "NYPepperoni"),
-    NYVEGGIE(NYVeggiePizza::new, "NYVeggie"),
-    CHICAGOCHEESE(ChicagoCheesePizza::new, "ChicagoCheese"),
-    CHICAGOPEPPERONI(ChicagoPepperoniPizza::new, "ChicagoPepperoni"),
-    CHICAGOVEGGIE(ChicagoVeggiePizza::new, "ChicagoVeggie");
+    NYCHEESE(NYCheesePizza::new),
+    NYPEPPERONI(NYPepperoniPizza::new),
+    NYVEGGIE(NYVeggiePizza::new),
+    CHICAGOCHEESE(ChicagoCheesePizza::new),
+    CHICAGOPEPPERONI(ChicagoPepperoniPizza::new),
+    CHICAGOVEGGIE(ChicagoVeggiePizza::new);
 
-    private final Function<String, Pizza> constructor;
-    private String name;
+//    private final Function<String, Pizza> constructor;
+    private final Supplier<Pizza> constructor;
 
-    PizzaType(Function<String, Pizza> constructor, String name) {
+    PizzaType(Supplier<Pizza> constructor) {
         this.constructor = constructor;
-        this.name = name;
     }
+//    private String name;
 
-    public Function<String, Pizza> getConstructor() {
-        return constructor;
-    }
-
-    public String getName() {
-        return name;
-    }
+//    PizzaType(Function<String, Pizza> constructor, String name) {
+//        this.constructor = constructor;
+//        this.name = name;
+//    }
+//
+//    public Function<String, Pizza> getConstructor() {
+//        return constructor;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
 }

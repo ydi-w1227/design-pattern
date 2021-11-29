@@ -10,6 +10,7 @@ public class OrcSoldier extends RequestHandler {
     }
 
     @Override
+    // handle the request or pass the request to next handler
     public void handleRequest(Request req) {
         if (req.getRequestType().equals(RequestType.COLLECT_TAX)) {
             printHandling(req);

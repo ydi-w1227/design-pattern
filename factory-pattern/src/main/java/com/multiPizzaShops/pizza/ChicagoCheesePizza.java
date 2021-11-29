@@ -1,14 +1,10 @@
 package com.multiPizzaShops.pizza;
 
 public class ChicagoCheesePizza extends Pizza {
-    String name;
-
-    public ChicagoCheesePizza(String s) {
-        this.name = s;
-    }
-
-    @Override
-    public void prepare() {
-        System.out.println("Preparing Chicago style " + name + " Pizza");
+    public ChicagoCheesePizza() {
+        name = "Chicago Style Cheese Pizza";
+        dough = "Thick Crust Dough";
+        sauce = "Plum Tomato Sauce";
+        toppings.add("Shredded Mozzarella Cheese");
     }
 }

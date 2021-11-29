@@ -13,12 +13,12 @@ public class ChicagoPizzaStore extends PizzaStore {
     public Pizza createPizza(String type) {
         Pizza pizza = null;
         if (type.equals("Cheese")) {
-            pizza = new ChicagoCheesePizza("Cheese");
+            pizza = new ChicagoCheesePizza();
         } else if (type.equals("Pepperoni")) {
-            pizza = new ChicagoPepperoniPizza("Pepperoni");
+            pizza = new ChicagoPepperoniPizza();
         } else if (type.equals("Veggie")) {
-            pizza = new ChicagoCheesePizza("Veggie");
-        }
+            pizza = new ChicagoCheesePizza();
+        } else return null;
         return pizza;
     }
 

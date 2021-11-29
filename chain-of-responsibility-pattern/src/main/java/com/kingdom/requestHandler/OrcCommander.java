@@ -10,6 +10,7 @@ public class OrcCommander extends RequestHandler {
     }
 
     @Override
+    // handle the request or pass the request to next handler
     public void handleRequest(Request req) {
         // if RequestType = DEFEND_CASTLE, then this handler handles the request
         if (req.getRequestType().equals(RequestType.DEFEND_CASTLE)) {

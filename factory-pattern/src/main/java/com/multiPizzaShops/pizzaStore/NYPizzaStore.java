@@ -14,12 +14,12 @@ public class NYPizzaStore extends PizzaStore {
     public Pizza createPizza(String type) {
         Pizza pizza = null;
         if (type.equals("Cheese")) {
-            pizza = new NYCheesePizza("Cheese");
+            pizza = new NYCheesePizza();
         } else if (type.equals("Pepperoni")) {
-            pizza = new NYPepperoniPizza("Pepperoni");
+            pizza = new NYPepperoniPizza();
         } else if (type.equals("Veggie")) {
-            pizza = new NYVeggiePizza("Veggie");
-        }
+            pizza = new NYVeggiePizza();
+        } else return null;
         return pizza;
     }
 
